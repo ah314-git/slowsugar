@@ -1,0 +1,489 @@
+.header {
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 159, 170, 0.8);
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.nav_list {
+    display: flex;
+    gap: 32px;
+}
+
+.nav_list a {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Paperozi", sans-serif;
+    color: #FFFFFF;
+}
+
+.nav_list a:hover {
+    font-weight: 400;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+
+
+
+.banner {
+    width: 100%;
+    height: 1100px;
+    background: #eee;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+
+    width: 100%;
+    height: 1000px;
+    background: #FFFFFF;
+}
+
+.story h2 {
+    color: #FF9FAA;
+    font-size: 64px;
+    font-weight: 500;
+    font-family: "JejuStoneWall", sans-serif;
+    line-height: 1.2;
+}
+
+.story h2 .outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #FF9FAA;
+    text-stroke: 2px #FF9FAA;
+}
+
+.story p {
+    color: #111111;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Paperozi", sans-serif;
+    line-height: 2.5;
+}
+
+.story_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 64px;
+    border: 2px solid #FF9FAA;
+    border-radius: 40px;
+    background: #FFFFFF;
+    color: #FF9FAA;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Paperozi", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.story_btn:hover {
+    background: #FF9FAA;
+    color: #ffffff;
+}
+
+
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    height: 1100px;
+    background-color: #FF9FAA;
+    gap: 24px;
+}
+
+.menu h2 {
+    color: #FFFFFF;
+    font-size: 64px;
+    font-weight: 500;
+    font-family: "JejuStoneWall", sans-serif;
+}
+
+.menu_tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    background: #FF9FAA;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Paperozi", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu_tab ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_tab li {
+    width: 100px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.menu_tab li.active {
+    border-radius: 40px;
+    background: #fff;
+    color: #FF9FAA;
+    font-weight: 600;
+}
+
+.menu_slider {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.menu_card_wrap {
+    display: flex;
+    overflow: hidden;
+    width: 1140px;
+    height: 320px;
+    gap: 40px;
+    margin: 0 40px;
+}
+
+.menu_card {
+    width: 256px;
+    height: 320px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prev,
+.next {
+    width: 64px;
+    height: 64px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prev {
+    background: url("assets/icon/prev.svg") no-repeat;
+}
+
+.next {
+    background: url("assets/icon/next.svg") no-repeat;
+}
+
+.prev:hover {
+    background: url("assets/icon/prev_h.svg");
+}
+
+.next:hover {
+    background: url("assets/icon/next_h.svg");
+}
+
+.menu_card img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+}
+
+.menu_card span {
+    color: #111111;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Paperozi", sans-serif;
+}
+
+.menu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 64px;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    background: #FF9FAA;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Paperozi", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+}
+
+.menu_btn:hover {
+    background: #FFFFFF;
+    color: #FF9FAA;
+}
+
+
+
+
+
+.franchise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 1100px;
+    background-color: #FFFDEA;
+}
+
+.franchise_title {
+    width: 400px;
+    height: 800px;
+}
+
+.franchise_title h2 {
+    color: #FF9FAA;
+    font-size: 64px;
+    font-weight: 500;
+    font-family: "JejuStoneWall", sans-serif;
+}
+
+.franchise_title p {
+    color: #111111;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Paperozi", sans-serif;
+    line-height: 1.5;
+    margin-top: 16px;
+    margin-left: 8px;
+}
+
+.franchise_form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 800px;
+    border: 3px solid #FF9FAA;
+    border-radius: 80px;
+    background-color: #FFFFFF;
+    padding: 40px;
+    gap: 10px;
+}
+
+.franchise_form .labels {
+    color: #111111;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Paperozi", sans-serif;
+}
+
+.franchise_form .radio {
+    width: 16px;
+    height: 16px;
+    margin-top: 10px;
+
+    appearance: none;
+    border: 2px solid #FF9FAA;
+}
+
+.franchise_form .radio:checked {
+    background-color: #FF9FAA;
+}
+
+.franchise_form .box {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #F5F5F5;
+    outline: none;
+    font-size: 20px;
+}
+
+.franchise_form .areabox {
+    width: 100%;
+    height: 240px;
+    border: none;
+    background-color: #F5F5F5;
+    resize: none;
+    outline: none;
+}
+
+.submit_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 80px;
+    border: 4px solid #FF9FAA;
+    border-radius: 10px;
+    background: #FF9FAA;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Paperozi", sans-serif;
+    cursor: pointer;
+
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 400px;
+    background-color: #FF9FAA;
+
+    padding: 40px;
+    gap: 24px;
+}
+
+.line {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer_link a,
+.footer_info {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: "Paperozi", sans-serif;
+    line-height: 1.5;
+}
+
+.footer_link a:first-child {
+    font-weight: 500;
+}
+
+.footer_link a:not(:last-child)::after {
+    content: "|";
+    margin: 0 8px;
+    color: #FFFFFF;
+    font-weight: 200;
+}
+
+.footer_sns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
+
+/* font */
+@font-face {
+    font-family: 'JejuStoneWall';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Eommakkaturi';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}

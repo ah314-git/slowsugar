@@ -14,7 +14,7 @@
     <!-- 헤더 -->
     <header class="header">
         <div class="logo">
-            <h1><a href="index.html">SLOW SUGAR</a></h1>
+            <h1><a href="index.html"><img src="assets/icon/logo.svg" alt="SLOW SUGAR"></a></h1>
         </div>
         <nav class="nav">
             <ul class="nav_list">
@@ -29,14 +29,14 @@
 
     <!-- 배너 섹션 -->
     <section class="banner">
-        <img src="" alt="배너">
+        <img src="assets/img/banner.jpg" alt="배너">
     </section>
     <!---->
-    
+
 
     <!-- 브랜드 스토리 섹션 -->
     <section class="story">
-        <h2>더 달게? no! SLOW SUGAR</h2>
+        <h2><span class="outline">더 달게? no!</span><br>SLOW SUGAR</h2>
         <p>
             슬로우슈가는 매일 마시는 커피에서 불필요한 당을 덜어낸 카페입니다.<br>
             건강을 의식하지 않아도 자연스럽게 선택할 수 있는 맛을 목표로 합니다.<br>
@@ -60,12 +60,32 @@
             </ul>
         </div>
 
-        <button class="prev">◁</button>
-        <div class="menu_card">
-            <img src="" alt="음료수 이미지">
-            <span>아메리카노</span>
+        <div class="menu_slider">
+            <button class="prev"></button>
+            <div class="menu_card_wrap">
+                <div class="menu_card">
+                    <img src="assets/img/drink.png" alt="음료수 이미지">
+                    <span>아메리카노</span>
+                </div>
+                <div class="menu_card">
+                    <img src="assets/img/drink.png" alt="음료수 이미지">
+                    <span>아메리카노</span>
+                </div>
+                <div class="menu_card">
+                    <img src="assets/img/drink.png" alt="음료수 이미지">
+                    <span>아메리카노</span>
+                </div>
+                <div class="menu_card">
+                    <img src="assets/img/drink.png" alt="음료수 이미지">
+                    <span>아메리카노</span>
+                </div>
+                <div class="menu_card">
+                    <img src="assets/img/drink.png" alt="음료수 이미지">
+                    <span>아메리카노</span>
+                </div>
+            </div>
+            <button class="next"></button>
         </div>
-        <button class="next">▷</button>
 
         <a href="#" class="menu_btn">전체 메뉴 보러가기</a>
     </section>
@@ -75,40 +95,34 @@
     <section class="franchise">
         <div class="franchise_title">
             <h2>가맹문의</h2>
-            <p>슬로우슈가와 함께하실 소중한 가맹주님을 모집합니다.</p>
+            <p>슬로우슈가와 함께하실 <br> 소중한 가맹주님을 모집합니다.</p>
         </div>
         <form class="franchise_form">
-            <div>
-                <label for="name">이름</label>
-                <input type="text" id="name" name="name">
-            </div>
 
-            <div>
-                <label for="tel">전화번호</label>
-                <input type="tel" id="tel" name="tel">
-            </div>
+            <label class="labels" for="name">이름</label>
+            <input class="box" type="text" id="name" name="name">
 
-            <div>
-                <label for="email">이메일</label>
-                <input type="email" id="email" name="email">
-            </div>
+            <label class="labels" for="tel">전화번호</label>
+            <input class="box" type="tel" id="tel" name="tel">
+
+            <label class="labels" for="email">이메일</label>
+            <input class="box" type="email" id="email" name="email">
 
             <fieldset>
-                <legend>점포 유무</legend>
-                <label>
-                    <input type="radio" name="store" value="yes"> 있음
+                <legend class="labels">점포 유무</legend>
+                <label class="labels">
+                    <input class="radio" type="radio" name="store" value="yes">있음
                 </label>
-                <label>
-                    <input type="radio" name="store" value="no"> 없음
+                <label class="labels">
+                    <input class="radio" type="radio" name="store" value="no">없음
                 </label>
             </fieldset>
 
-            <div>
-                <label for="message">문의내용</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
+            <label class="labels" for="message">문의내용</label>
+            <textarea class="areabox" id="message" name="message"></textarea>
 
-            <button type="submit">제출하기</button>
+            <button class="submit_btn" type="submit">제출하기</button>
+
         </form>
 
     </section>
@@ -116,18 +130,27 @@
 
     <!-- 푸터 -->
     <footer class="footer">
-        개인정보처리방침 | 이용약관 | 이메일무단수집거부
-        <div class="line">---</div>
-        상호 ㈜슬로우슈가
-        대표전화 02-1234-5678
-        주소 서울특별시 강남구 ○○빌딩 8층
-        이메일 contact@slowsugar.co.kr
-        본 웹사이트는 포트폴리오 작업을 위해 제작된 가상의 브랜드입니다.
 
         <div class="footer_link">
-            <a href="#"><img src="" alt="유튜브 바로가기"></a>
-            <a href="#"><img src="" alt="페이스북 바로가기"></a>
-            <a href="#"><img src="" alt="인스타 바로가기"></a>
+            <a href="#none">개인정보처리방침</a>
+            <a href="#none">이용약관</a>
+            <a href="#none">이메일무단수집거부</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="footer_info">
+            상호 ㈜슬로우슈가<br>
+            대표전화 02-1234-5678<br>
+            주소 서울특별시 강남구 ○○빌딩 8층<br>
+            이메일 contact@slowsugar.co.kr<br><br>
+            본 웹사이트는 포트폴리오 작업을 위해 제작된 가상의 브랜드입니다.
+        </div>
+
+        <div class="footer_sns">
+            <a href="#"><img src="assets/icon/youtube.svg" alt="유튜브 바로가기"></a>
+            <a href="#"><img src="assets/icon/facebook.svg" alt="페이스북 바로가기"></a>
+            <a href="#"><img src="assets/icon/instagram.svg" alt="인스타 바로가기"></a>
         </div>
     </footer>
     <!---->
