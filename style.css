@@ -1,8 +1,90 @@
+/* font */
+@font-face {
+    font-family: 'JejuStoneWall';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Eommakkaturi';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* body {
+    overflow-x: hidden;
+} */
+
 .header {
     width: 100%;
     height: 80px;
     background: rgba(255, 159, 170, 0.8);
-    padding: 0 40px;
+    padding: 0 clamp(16px, 5vw, 40px);
 
     display: flex;
     align-items: center;
@@ -15,13 +97,15 @@
 }
 
 
+
 .nav_list {
     display: flex;
     gap: 32px;
 }
 
 .nav_list a {
-    font-size: 20px;
+    display: block;
+    font-size: 16px;
     font-weight: 300;
     font-family: "Paperozi", sans-serif;
     color: #FFFFFF;
@@ -30,6 +114,52 @@
 .nav_list a:hover {
     font-weight: 400;
     border-bottom: 1px solid #FFFFFF;
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.mobile_nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FF9FAA;
+
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.mobile_nav.active {
+    transform: translateX(0);
+}
+
+.mobile_nav .top {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.mobile_nav .top .close {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.mobile_nav_list a {
+    display: flex;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Paperozi", sans-serif;
+    color: #FFFFFF;
+    margin: 40px;
 }
 
 
@@ -65,7 +195,7 @@
 
 .story h2 {
     color: #FF9FAA;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 500;
     font-family: "JejuStoneWall", sans-serif;
     line-height: 1.2;
@@ -126,7 +256,7 @@
 
 .menu h2 {
     color: #FFFFFF;
-    font-size: 64px;
+    font-size: 36px;
     font-weight: 500;
     font-family: "JejuStoneWall", sans-serif;
 }
@@ -175,16 +305,15 @@
 .menu_slider {
     display: flex;
     align-items: center;
-    margin: 40px 0;
 }
 
 .menu_card_wrap {
     display: flex;
     overflow: hidden;
-    width: 1140px;
+    max-width: calc(256px * 4 + 40px * 3);
     height: 320px;
     gap: 40px;
-    margin: 0 40px;
+    margin: clamp(16px, 2.66vw, 40px);
 }
 
 .menu_card {
@@ -273,13 +402,16 @@
 }
 
 .franchise_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 400px;
     height: 800px;
 }
 
 .franchise_title h2 {
     color: #FF9FAA;
-    font-size: 64px;
+    font-size: 36px;
     font-weight: 500;
     font-family: "JejuStoneWall", sans-serif;
 }
@@ -291,12 +423,12 @@
     font-family: "Paperozi", sans-serif;
     line-height: 1.5;
     margin-top: 16px;
-    margin-left: 8px;
 }
 
 .franchise_form {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 700px;
     height: 800px;
     border: 3px solid #FF9FAA;
@@ -304,6 +436,7 @@
     background-color: #FFFFFF;
     padding: 40px;
     gap: 10px;
+
 }
 
 .franchise_form .labels {
@@ -350,18 +483,18 @@
     align-items: center;
 
     width: 300px;
-    height: 80px;
+    height: 60px;
     border: 4px solid #FF9FAA;
     border-radius: 10px;
     background: #FF9FAA;
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
     font-family: "Paperozi", sans-serif;
     cursor: pointer;
 
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 
@@ -371,9 +504,10 @@
     flex-direction: column;
 
     width: 100%;
-    height: 400px;
+    height: 500px;
     background-color: #FF9FAA;
 
+    position: relative;
     padding: 40px;
     gap: 24px;
 }
@@ -404,86 +538,121 @@
 
 .footer_sns {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.footer_sns img {
+    width: 64px;
+    height: 64px;
 }
 
 
 
 
-/* font */
-@font-face {
-    font-family: 'JejuStoneWall';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
-    font-weight: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Eommakkaturi';
-    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
+@media (max-width: 1440px) {
+    .menu_card_wrap {
+        max-width: calc(256px * 3 + 40px * 2);
+    }
 }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-display: swap;
+
+@media (max-width: 1200px) {
+
+    .menu_card_wrap {
+        max-width: calc(256px * 2 + 40px * 1);
+    }
+
+    .franchise {
+        flex-direction: column;
+    }
+
+    .franchise_title {
+        width: 700px;
+        height: 160px;
+    }
+
+
 }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-display: swap;
+
+@media (max-width: 780px) {
+
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu_card_wrap {
+        max-width: calc(256px * 1);
+    }
+
+
+    .franchise_title {
+        width: 480px;
+    }
+
+    .franchise_form {
+        width: 480px;
+    }
 }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-display: swap;
-}
+@media (max-width: 480px) {
+    .logo img {
+        display: none;
+    }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-display: swap;
-}
+    .logo {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        background: url("assets/icon/mini_logo.svg") no-repeat left center;
+        background-size: contain;
+    }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
+    .story h2 {
+        font-size: 36px;
+    }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-display: swap;
-}
+    .story p {
+        padding: 0 40px;
+    }
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
-    font-weight: 900;
-    font-display: swap;
+    .story p br {
+        display: none;
+    }
+
+    .story_btn {
+        width: 240px;
+    }
+
+    .menu_tab {
+        width: 300px;
+    }
+
+    .menu_tab li {
+        width: 60px;
+    }
+
+    .menu_btn {
+        width: 240px;
+    }
+
+    .franchise_title {
+        width: 320px;
+    }
+
+    .franchise_form {
+        width: 320px;
+    }
+
+    .submit_btn {
+        width: 200px;
+    }
 }
