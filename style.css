@@ -76,9 +76,12 @@
     font-display: swap;
 }
 
+
+
 /* body {
     overflow-x: hidden;
 } */
+
 
 .header {
     width: 100%;
@@ -269,14 +272,12 @@
     width: 500px;
     height: 48px;
     border: 2px solid #FFFFFF;
-    border-radius: 40px;
-    background: #FF9FAA;
+    border-radius: 25px;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 400;
     font-family: "Paperozi", sans-serif;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .menu_tab ul {
@@ -286,34 +287,51 @@
 }
 
 .menu_tab li {
-    width: 100px;
-    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100px;
+    height: 48px;
     cursor: pointer;
-    padding: 10px 0;
+    z-index: 10;
 }
 
 .menu_tab li.active {
-    border-radius: 40px;
-    background: #fff;
     color: #FF9FAA;
     font-weight: 600;
 }
 
+.tab_display {
+    position: absolute;
+    width: 100px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+
+
+
 .menu_slider {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .menu_card_wrap {
-    display: flex;
-    overflow: hidden;
     max-width: calc(256px * 4 + 40px * 3);
     height: 320px;
-    gap: 40px;
+    overflow: hidden;
     margin: clamp(16px, 2.66vw, 40px);
+}
+
+.menu_card_list {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .menu_card {
@@ -327,6 +345,7 @@
 
 .prev,
 .next {
+
     width: 64px;
     height: 64px;
     border: none;
@@ -349,6 +368,7 @@
 .next:hover {
     background: url("assets/icon/next_h.svg");
 }
+
 
 .menu_card img {
     width: 256px;
@@ -655,4 +675,9 @@
     .submit_btn {
         width: 200px;
     }
+
+    .tab_display {
+        width: 60px;
+    }
+    
 }

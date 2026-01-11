@@ -14,13 +14,15 @@
     <!-- 헤더 -->
     <header class="header">
 
-        <div class="logo"><h1><a href="index.html"><img src="assets/icon/logo.svg" alt="SLOW SUGAR"></a></h1></div>
-        
+        <div class="logo">
+            <h1><a href="index.html"><img src="assets/icon/logo.svg" alt="SLOW SUGAR"></a></h1>
+        </div>
+
         <nav class="nav">
             <ul class="nav_list">
-                <li><a href="#">SLOW SUGAR</a></li>
-                <li><a href="#">전체메뉴</a></li>
-                <li><a href="#">가맹문의</a></li>
+                <li><a href="#story">SLOW SUGAR</a></li>
+                <li><a href="#menu">전체메뉴</a></li>
+                <li><a href="#franchise">가맹문의</a></li>
                 <li><a href="#">이벤트</a></li>
             </ul>
         </nav>
@@ -32,9 +34,9 @@
                 <button class="close"><img src="assets/icon/close.svg" alt="오버레이 메뉴 닫기"></button>
             </div>
             <ul class="mobile_nav_list">
-                <li><a href="#">SLOW SUGAR</a></li>
-                <li><a href="#">전체메뉴</a></li>
-                <li><a href="#">가맹문의</a></li>
+                <li><a href="#story">SLOW SUGAR</a></li>
+                <li><a href="#menu">전체메뉴</a></li>
+                <li><a href="#franchise">가맹문의</a></li>
                 <li><a href="#">이벤트</a></li>
             </ul>
         </nav>
@@ -50,7 +52,7 @@
 
 
     <!-- 브랜드 스토리 섹션 -->
-    <section class="story">
+    <section class="story" id="story">
         <h2><span class="outline">더 달게? no!</span><br>SLOW SUGAR</h2>
         <p>
             슬로우슈가는 매일 마시는 커피에서 불필요한 당을 덜어낸 카페입니다.<br>
@@ -62,7 +64,7 @@
     <!---->
 
     <!-- 메뉴 섹션 -->
-    <section class="menu">
+    <section class="menu" id="menu">
         <h2>MENU</h2>
 
         <div class="menu_tab">
@@ -72,33 +74,102 @@
                 <li data-category="smoothie">스무디</li>
                 <li data-category="tea">티</li>
                 <li data-category="dessert">디저트</li>
+                <div class="tab_display"></div>
             </ul>
         </div>
 
         <div class="menu_slider">
             <button class="prev"></button>
             <div class="menu_card_wrap">
-                <div class="menu_card">
-                    <img src="assets/img/drink.png" alt="음료수 이미지">
-                    <span>아메리카노</span>
+
+                <div class="menu_card_list">
+                    <!-- 커피 -->
+                    <div class="menu_card" data-category="coffee">
+                        <img src="assets/img/drink.png" alt="아메리카노">
+                        <span>아메리카노</span>
+                    </div>
+                    <div class="menu_card" data-category="coffee">
+                        <img src="assets/img/drink.png" alt="슬로우슈가 라떼">
+                        <span>슬로우슈가 라떼</span>
+                    </div>
+                    <div class="menu_card" data-category="coffee">
+                        <img src="assets/img/drink.png" alt="바닐라 라떼">
+                        <span>바닐라 라떼</span>
+                    </div>
+                    <div class="menu_card" data-category="coffee">
+                        <img src="assets/img/drink.png" alt="헤이즐넛 라떼">
+                        <span>헤이즐넛 라떼</span>
+                    </div>
+                    <div class="menu_card" data-category="coffee">
+                        <img src="assets/img/drink.png" alt="콜드브루">
+                        <span>콜드브루</span>
+                    </div>
+                    <div class="menu_card" data-category="coffee">
+                        <img src="assets/img/drink.png" alt="콜드브루 라떼">
+                        <span>콜드브루 라떼</span>
+                    </div>
+
+                    <!-- 스무디 -->
+                    <div class="menu_card" data-category="smoothie">
+                        <img src="assets/img/drink.png" alt="그릭요거트 베리 스무디">
+                        <span>그릭요거트 베리 스무디</span>
+                    </div>
+                    <div class="menu_card" data-category="smoothie">
+                        <img src="assets/img/drink.png" alt="바나나 오트 스무디">
+                        <span>바나나 오트 스무디</span>
+                    </div>
+                    <div class="menu_card" data-category="smoothie">
+                        <img src="assets/img/drink.png" alt="블루베리 아몬드 스무디">
+                        <span>블루베리 아몬드 스무디</span>
+                    </div>
+                    <div class="menu_card" data-category="smoothie">
+                        <img src="assets/img/drink.png" alt="키위 케일 스무디">
+                        <span>키위 케일 스무디</span>
+                    </div>
+
+                    <!-- 티 -->
+                    <div class="menu_card" data-category="tea">
+                        <img src="assets/img/drink.png" alt="레몬 히비스커스 티">
+                        <span>레몬 히비스커스 티</span>
+                    </div>
+                    <div class="menu_card" data-category="tea">
+                        <img src="assets/img/drink.png" alt="캐모마일 티">
+                        <span>캐모마일 티</span>
+                    </div>
+                    <div class="menu_card" data-category="tea">
+                        <img src="assets/img/drink.png" alt="민트 티">
+                        <span>민트 티</span>
+                    </div>
+                    <div class="menu_card" data-category="tea">
+                        <img src="assets/img/drink.png" alt="체리 허브티">
+                        <span>체리 허브티</span>
+                    </div>
+                    <div class="menu_card" data-category="tea">
+                        <img src="assets/img/drink.png" alt="유자 허브 티">
+                        <span>유자 허브 티</span>
+                    </div>
+
+                    <!-- 디저트 -->
+                    <div class="menu_card" data-category="dessert">
+                        <img src="assets/img/drink.png" alt="초코칩 오트 쿠키">
+                        <span>초코칩 오트 쿠키</span>
+                    </div>
+                    <div class="menu_card" data-category="dessert">
+                        <img src="assets/img/drink.png" alt="아몬드 오트 쿠키">
+                        <span>아몬드 오트 쿠키</span>
+                    </div>
+                    <div class="menu_card" data-category="dessert">
+                        <img src="assets/img/drink.png" alt="피넛버터 쿠키">
+                        <span>피넛버터 쿠키</span>
+                    </div>
+                    <div class="menu_card" data-category="dessert">
+                        <img src="assets/img/drink.png" alt="시나몬 당근케이크">
+                        <span>시나몬 당근케이크</span>
+                    </div>
                 </div>
-                <div class="menu_card">
-                    <img src="assets/img/drink.png" alt="음료수 이미지">
-                    <span>아메리카노</span>
-                </div>
-                <div class="menu_card">
-                    <img src="assets/img/drink.png" alt="음료수 이미지">
-                    <span>아메리카노</span>
-                </div>
-                <div class="menu_card">
-                    <img src="assets/img/drink.png" alt="음료수 이미지">
-                    <span>아메리카노</span>
-                </div>
-                <div class="menu_card">
-                    <img src="assets/img/drink.png" alt="음료수 이미지">
-                    <span>아메리카노</span>
-                </div>
+
             </div>
+
             <button class="next"></button>
         </div>
 
@@ -107,7 +178,7 @@
     <!---->
 
     <!-- 가맹문의 섹션 -->
-    <section class="franchise">
+    <section class="franchise" id="franchise">
         <div class="franchise_title">
             <h2>가맹문의</h2>
             <p>슬로우슈가와 함께하실 <br> 소중한 가맹주님을 모집합니다.</p>
