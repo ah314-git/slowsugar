@@ -83,10 +83,26 @@
 } */
 
 
+html,
+body {
+    scroll-behavior: smooth;
+    touch-action: none;
+    overscroll-behavior-y: contain;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+
+
+
 .header {
     width: 100%;
     height: 80px;
-    background: rgba(255, 159, 170, 0.8);
+    background: #FF9FAA;
     padding: 0 clamp(16px, 5vw, 40px);
 
     display: flex;
@@ -169,8 +185,6 @@
 
 
 .banner {
-    width: 100%;
-    height: 1100px;
     background: #eee;
 }
 
@@ -191,8 +205,7 @@
     text-align: center;
     gap: 40px;
 
-    width: 100%;
-    height: 1000px;
+
     background: #FFFFFF;
 }
 
@@ -251,8 +264,7 @@
     align-items: center;
     text-align: center;
 
-    width: 100%;
-    height: 1100px;
+
     background-color: #FF9FAA;
     gap: 24px;
 }
@@ -338,7 +350,7 @@
     width: 256px;
     height: 320px;
     cursor: pointer;
-    background: #fff;
+    background: #FFFFFF;
     border-radius: 40px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
@@ -346,8 +358,8 @@
 .prev,
 .next {
 
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -399,7 +411,6 @@
     font-family: "Paperozi", sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 24px;
 }
 
 .menu_btn:hover {
@@ -415,9 +426,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 100%;
-    height: 1100px;
     background-color: #FFFDEA;
 }
 
@@ -442,7 +450,7 @@
     font-weight: 400;
     font-family: "Paperozi", sans-serif;
     line-height: 1.5;
-    margin-top: 16px;
+    margin: 16px 0;
 }
 
 .franchise_form {
@@ -456,7 +464,6 @@
     background-color: #FFFFFF;
     padding: 40px;
     gap: 10px;
-
 }
 
 .franchise_form .labels {
@@ -481,7 +488,7 @@
 
 .franchise_form .box {
     width: 100%;
-    height: 50px;
+    height: 40px;
     border: none;
     background-color: #F5F5F5;
     outline: none;
@@ -495,6 +502,10 @@
     background-color: #F5F5F5;
     resize: none;
     outline: none;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Paperozi", sans-serif;
 }
 
 .submit_btn {
@@ -514,7 +525,7 @@
     cursor: pointer;
 
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: clamp(16px, 4vw, 40px);
 }
 
 
@@ -593,7 +604,6 @@
         height: 160px;
     }
 
-
 }
 
 
@@ -611,19 +621,29 @@
         max-width: calc(256px * 1);
     }
 
-
     .franchise_title {
         width: 480px;
+        height: 120px;
+    }
+
+    .franchise p {
+        font-size: 20px;
     }
 
     .franchise_form {
-        width: 480px;
+        width: 90%;
+        height: auto;
+    }
+
+    .franchise_form .areabox {
+        height: auto;
     }
 }
 
 
 
 @media (max-width: 480px) {
+
     .logo img {
         display: none;
     }
@@ -666,10 +686,11 @@
 
     .franchise_title {
         width: 320px;
+        height: 60px;
     }
 
-    .franchise_form {
-        width: 320px;
+    .franchise p {
+        display: none;
     }
 
     .submit_btn {
@@ -679,5 +700,5 @@
     .tab_display {
         width: 60px;
     }
-    
+
 }

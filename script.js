@@ -26,7 +26,7 @@ let currentIdx = 0;
 const cardWidth = 256;
 const gap = 40;
 const moveSize = cardWidth + gap;
-let isMoving = false; 
+let isMoving = false;
 
 
 tabs.forEach((tab, index) => {
@@ -63,8 +63,6 @@ tabs.forEach((tab, index) => {
 });
 
 
-
-
 nextBtn.addEventListener('click', () => {
     if (isMoving) return;
     const visibleCards = Array.from(cards).filter(card => card.style.display !== 'none');
@@ -86,3 +84,95 @@ prevBtn.addEventListener('click', () => {
         setTimeout(() => { isMoving = false; }, 500);
     }
 });
+
+
+
+
+
+
+/* 풀페이지 스크롤링 */
+const sections = document.querySelectorAll('.section');
+const footer = document.querySelector('footer');
+let current = 0;
+let isScrolling = false;
+
+
+
+window.addEventListener('wheel', (e) => {
+
+    if (current === sections.length - 1 && e.deltaY > 0) {
+        return; 
+    }
+    if (current === sections.length - 1 && e.deltaY < 0 && window.scrollY > sections[current].offsetTop) {
+        return;
+    }
+    e.preventDefault();
+    if (isScrolling) return;
+
+
+
+    const direction = e.deltaY > 0 ? 1 : -1;
+
+    if (direction === 1 && current === sections.length - 1) return;
+    if (direction === -1 && current === 0) return;
+
+    isScrolling = true;
+    current += direction;
+
+    window.scrollTo({
+        top: sections[current].offsetTop,
+        behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+        isScrolling = false;
+    }, 1000);
+}, { passive: false });
+
+
+/* 풀페이지 스크롤링(모바일) */
+let touchStartY = 0;
+
+window.addEventListener('touchmove', (e) => {
+    if (current < sections.length - 1) {
+        if (e.cancelable) e.preventDefault();
+    }
+}, { passive: false });
+
+window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].pageY;
+}, { passive: false });
+
+window.addEventListener('touchend', (e) => {
+    const touchEndY = e.changedTouches[0].pageY;
+    const diffY = touchStartY - touchEndY;
+    const threshold = 40;
+
+    if (isScrolling) return;
+    if (diffY < -threshold) { 
+        if (current > 0) {
+            isScrolling = true;
+            current--;
+            moveToSection();
+        }
+    } 
+    else if (diffY > threshold) {
+        if (current < sections.length - 1) {
+            isScrolling = true;
+            current++;
+            moveToSection();
+        }
+    }
+}, { passive: false });
+
+
+function moveToSection() {
+    window.scrollTo({
+        top: sections[current].offsetTop,
+        behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+        isScrolling = false;
+    }, 1000);
+}
